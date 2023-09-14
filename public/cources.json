@@ -1,0 +1,99 @@
+[
+      {
+        "id": "1",
+        "course_name": "Computer-Basic Courses",
+        "course_cover_image": "https://i.ibb.co/DCvrJTS/Basic-Computer.jpg",
+        "credit_hour": 3,
+        "price": 150,
+        "details": "This bundle includes a variety of computer-based courses, including programming, web development, and computer science. Each course is designed to provide you with a solid foundation in the respective field."
+      },
+      {
+        "id": "2",
+        "course_name": "Digital Marketing Fundamentals",
+        "course_cover_image": "https://i.ibb.co/PY2zb8H/Fundamentals-Of-Digital-Marketing.jpg",
+        "credit_hour": 2,
+        "price": 100,
+        "details": "Learn the fundamentals of digital marketing, including SEO, social media marketing, email marketing, and content creation. This course is perfect for beginners looking to enter the world of online marketing."
+      },
+      {
+        "id": "3",
+        "course_name": "Data Science Masterclass",
+        "course_cover_image": "https://i.ibb.co/D42BvBN/Data-Science-Masterclass.jpg",
+        "credit_hour": 4,
+        "price": 200,
+        "details": "Become a data science expert with this comprehensive masterclass. You'll learn data analysis, machine learning, and data visualization techniques. This course is suitable for both beginners and experienced data professionals."
+      },
+      {
+        "id": "4",
+        "course_name": "Graphic Design Essentials",
+        "course_cover_image": "https://i.ibb.co/9gkgdYy/Graphic-Design-Essentials.jpg",
+        "credit_hour": 2,
+        "price": 120,
+        "details": "Master the essentials of graphic design, including Adobe Photoshop and Illustrator. Create stunning visuals and unleash your creative potential."
+      },
+      {
+        "id": "5",
+        "course_name": "Introduction to C Programming",
+        "course_cover_image": "https://i.ibb.co/xz6kNV2/Introduction-to-Programming.jpg",
+        "credit_hour": 2,
+        "price": 90,
+        "details": "Learn the basics of programming with this beginner-friendly course. Start your journey into the world of coding."
+      },
+      {
+        "id": "6",
+        "course_name": "Introduction to C++ for DSA",
+        "course_cover_image": "https://i.ibb.co/Zhm9fhz/Introduction-to-C-for-DSA.png",
+        "credit_hour": 3,
+        "price": 150,
+        "details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      },
+      {
+        "id": "7",
+        "course_name": "Photography for Beginners",
+        "course_cover_image": "https://i.ibb.co/Wsns1Qb/Photography-for-Beginners.jpg",
+        "credit_hour": 2,
+        "price": 100,
+        "details": "Start your journey into the world of photography with this beginner-friendly course. Learn the basics of composition, lighting, and camera settings."
+      },
+      {
+        "id": "8",
+        "course_name": "Mobile App Development",
+        "course_cover_image": "https://i.ibb.co/D5K6Pzg/Mobile-App-Development.jpg",
+        "credit_hour": 3,
+        "price": 180,
+        "details": "Learn how to develop mobile apps for iOS and Android platforms. Get hands-on experience with app development tools and frameworks."
+      },
+      {
+        "id": "9",
+        "course_name": "Introduction to Machine Learning",
+        "course_cover_image": "https://i.ibb.co/GnFZgtf/Introduction-to-Machine-Learning.jpg",
+        "credit_hour": 3,
+        "price": 190,
+        "details": "Explore the world of machine learning with this introductory course. Learn about algorithms, data preprocessing, and model evaluation."
+      },
+      {
+        "id": "10",
+        "course_name": "Creative Writing Workshop",
+        "course_cover_image": "https://i.ibb.co/N7yNvdq/Creative-Writing-Workshop.jpg",
+        "credit_hour": 2,
+        "price": 110,
+        "details": "Unlock your creativity and improve your writing skills with this interactive creative writing workshop."
+      },
+      {
+        "id": "11",
+        "course_name": "Business Ethics and Leadership",
+        "course_cover_image": "https://i.ibb.co/s9b4g5T/Business-Ethics-and-Leadership.jpg",
+        "credit_hour": 3,
+        "price": 160,
+        "details": "Learn about ethical decision-making and effective leadership strategies in the business world."
+      },
+      {
+        "id": "12",
+        "course_name": "Introduction to Cybersecurity",
+        "course_cover_image": "https://i.ibb.co/1zyjKq7/Introduction-to-Cybersecurity.jpg",
+        "credit_hour": 3,
+        "price": 170,
+        "details": "Discover the fundamentals of cybersecurity, including threat detection, network security, and data protection."
+      }
+    ]
+  
