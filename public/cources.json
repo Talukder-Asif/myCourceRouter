@@ -5,7 +5,7 @@
         "course_cover_image": "https://i.ibb.co/DCvrJTS/Basic-Computer.jpg",
         "credit_hour": 3,
         "price": 150,
-        "details": "This bundle includes a variety of computer-based courses, including programming, web development, and computer science. Each course is designed to provide you with a solid foundation in the respective field."
+        "details": "This bundle includes a variety of computer-based courses, including programming, web development, and computer science. "
       },
       {
         "id": "2",
@@ -13,7 +13,7 @@
         "course_cover_image": "https://i.ibb.co/PY2zb8H/Fundamentals-Of-Digital-Marketing.jpg",
         "credit_hour": 2,
         "price": 100,
-        "details": "Learn the fundamentals of digital marketing, including SEO, social media marketing, email marketing, and content creation. This course is perfect for beginners looking to enter the world of online marketing."
+        "details": "Learn the fundamentals of digital marketing, including SEO, social media marketing, email marketing, and content creation."
       },
       {
         "id": "3",
@@ -21,7 +21,7 @@
         "course_cover_image": "https://i.ibb.co/D42BvBN/Data-Science-Masterclass.jpg",
         "credit_hour": 4,
         "price": 200,
-        "details": "Become a data science expert with this comprehensive masterclass. You'll learn data analysis, machine learning, and data visualization techniques. This course is suitable for both beginners and experienced data professionals."
+        "details": "Become a data science expert with this comprehensive masterclass.This course is suitable for both beginners and experienced data professionals."
       },
       {
         "id": "4",
@@ -50,7 +50,7 @@
       {
         "id": "7",
         "course_name": "Photography for Beginners",
-        "course_cover_image": "https://i.ibb.co/Wsns1Qb/Photography-for-Beginners.jpg",
+        "course_cover_image": "https://i.ibb.co/LpmpTmk/Photography-for-Beginners.jpg",
         "credit_hour": 2,
         "price": 100,
         "details": "Start your journey into the world of photography with this beginner-friendly course. Learn the basics of composition, lighting, and camera settings."
