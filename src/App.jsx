@@ -1,20 +1,47 @@
 /* eslint-disable react/jsx-key */
-import { useState } from 'react'
+import { createElement, useState } from 'react'
 import { useEffect } from 'react'
 import './App.css'
-
 import { TbBrandCashapp } from 'react-icons/Tb';
 import { BsBook } from 'react-icons/Bs';
 
 function App() {
-  const [AllCource, setAllCource] = useState([])
+  const [AllCource, setAllCource] = useState([]);
+  const [Carts, setCarts] = useState([]);
   useEffect(() => {
     fetch('../public/cources.json')
     .then((ref) => ref.json())
     .then((data) => setAllCource(data));
   },[]);
 
-  let courceCradit = 20;
+  const [RemainingCradit, setRemainingCradit] = useState(20);
+  const [CraditHour, setCraditHour] = useState(0);
+
+  // Function for calculate cradit hour and remaining cradit.
+  const craditCalculator = (courceCradit) =>{
+    const NewRemainingCradit = RemainingCradit - courceCradit;
+    const totalCradit = CraditHour + courceCradit;
+    setCraditHour(totalCradit);
+    setRemainingCradit (NewRemainingCradit);
+    console.log(RemainingCradit);
+  }
+
+  const [TotalPrice, setTotalPrice]= useState(0);
+  const CalculatePrice = (price) => {
+    const newPrice = TotalPrice + price;
+    setTotalPrice(newPrice);
+  }
+
+ 
+
+// Function for handle the cart after clicking button
+  const handelBtn = (cartProduct) =>{
+    Carts.push(cartProduct);
+    console.log(Carts);
+    craditCalculator(cartProduct.credit_hour);
+    CalculatePrice(cartProduct.price)
+  }
+
 
   return (
     <>
@@ -31,20 +58,20 @@ function App() {
               <p className='flex text-[#737272] font-normal text-sm items-center gap-1'><TbBrandCashapp/>  Price : {Indivisualcource.price} </p>
               <p className='flex text-[#737272] font-normal text-sm items-center gap-1'><BsBook/>  Credit : {Indivisualcource.credit_hour}hr </p>
             </div>
-            <button className='bg-[#2f80ed]  rounded-md py-1 text-white w-full'>Select</button>
+            <button onClick={() => handelBtn(Indivisualcource)} className='bg-[#2f80ed]  rounded-md py-1 text-white w-full'>Select</button>
           </div>
           ))}
 
       </div>
       <div className='Cart bg-white h-max rounded-2xl w-1/4 p-5'>
-          <h3 className='text-[#2f80ed] my-3 text-lg font-bold'>Credit Hour Remaining : {courceCradit} hr</h3>
+          <h3 id='remainingCr' className='text-[#2f80ed] my-3 text-lg font-bold'>Credit Hour Remaining : {RemainingCradit} hr</h3>
           <hr></hr>
           <h3 className='text-[#1C1B1B] text-xl font-bold my-3'>Course Name</h3>
-
+            <ul id='ulName'></ul>
           <hr></hr>
-          <p className='text-[#737272] my-2 text-base font-medium'>Total Credit Hour : </p>
+          <p className='text-[#737272] my-2 text-base font-medium'>Total Credit Hour : {CraditHour}</p>
           <hr></hr>
-          <p className='text-[#737272] my-2 text-base font-semibold'>Total Price : USD</p>
+          <p className='text-[#737272] my-2 text-base font-semibold'>Total Price : {TotalPrice} USD</p>
       </div>
     </main>
     </>
