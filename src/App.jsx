@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import './App.css'
 import { TbBrandCashapp } from 'react-icons/Tb';
 import { BsBook } from 'react-icons/Bs';
+import { AiOutlineShoppingCart } from 'react-icons/Ai';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 let AddCartOn = true;
@@ -12,7 +13,7 @@ function App() {
   const [AllCource, setAllCource] = useState([]);
   const [Carts, setCarts] = useState([]);
   useEffect(() => {
-    fetch('../public/cources.json')
+    fetch('cources.json')
     .then((ref) => ref.json())
     .then((data) => setAllCource(data));
   },[]);
@@ -70,12 +71,24 @@ function App() {
     }
   }
   console.log(Carts)
+  // Making mobile cart button
+  let cartBtnClick = false;
+  const cartPart = document.getElementById('cartPart')
+  const mobileCartBtn = () =>{
+    if(!cartBtnClick){
+      cartPart.classList.remove("hidden");
+      cartBtnClick = true;
+    }else{
+      cartPart.classList.add("hidden");
+      cartBtnClick = false;
+    }
+  }
   
 
   return (
     <>
     <h1 className='text-[#1C1B1B] text-3xl font-bold py-7 text-center'>Course Registration</h1>
-    <main className='md:flex relative md:gap-3'>
+    <main className='md:flex md:gap-3'>
       <div className='md:w-3/4 grid gap-3 md:grid-cols-2 lg:grid-cols-3 CourceConteiner'>
 
           {AllCource.map((Indivisualcource)=>(
@@ -92,21 +105,27 @@ function App() {
           ))}
 
       </div>
-      <div className='Cart md:sticky md:top-3 bg-white h-max rounded-2xl md:w-1/4 p-5'>
-          <h3 id='remainingCr' className='text-[#2f80ed] my-3 text-lg font-bold'>Credit Hour Remaining : {RemainingCradit} hr</h3>
-          <hr></hr>
-          <h3 className='text-[#1C1B1B] text-xl font-bold my-3'>Course Name</h3>
-            <ol className="list-decimal ml-5">
-              {Carts.map((cart, index)=>(
-                <li key={index}>{cart?.course_name}</li>
-              ))}
-            </ol>
-          <hr></hr>
-          <p className='text-[#737272] my-2 text-base font-medium'>Total Credit Hour : {CraditHour}</p>
-          <hr></hr>
-          <p className='text-[#737272] my-2 text-base font-semibold'>Total Price : {TotalPrice} USD</p>
+      <div id='cartPart' className='md:w-1/4 hidden md:inline-block sticky bottom-16 md:bottom-0 md:relative'>
+        <div className='Cart md:sticky md:top-3 bg-white h-max rounded-2xl p-5'>
+            <h3 id='remainingCr' className='text-[#2f80ed] my-3 text-lg font-bold'>Credit Hour Remaining : {RemainingCradit} hr</h3>
+            <hr></hr>
+            <h3 className='text-[#1C1B1B] text-xl font-bold my-3'>Course Name</h3>
+              <ol className="list-decimal ml-5 text-[#737272] font-normal text-base">
+                {Carts.map((cart, index)=>(
+                  <li key={index}>{cart?.course_name}</li>
+                ))}
+              </ol>
+            <hr></hr>
+            <p className='text-[#737272] my-2 text-base font-medium'>Total Credit Hour : {CraditHour}</p>
+            <hr></hr>
+            <p className='text-[#737272] my-2 text-base font-semibold'>Total Price : {TotalPrice} USD</p>
+        </div>
       </div>
     </main>
+    
+    <div className='sticky md:hidden bottom-2 text-right'>
+    <button onClick={mobileCartBtn} className='text-2xl text-white p-3 mr-2 rounded-full bg-[#2f80ed] '><AiOutlineShoppingCart/></button>
+    </div>
     <ToastContainer
       position="top-right"
       autoClose={5000}
